@@ -1,10 +1,12 @@
-
-
+import Nav from "./components/Nav";
+import NavVert from "./components/Nav-vert";
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
+    <>
+    
+    <Nav/>
+    <NavVert/>   
+    </>
   );
 }
 
