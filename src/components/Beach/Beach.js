@@ -9,10 +9,11 @@ const ratings = "5";
 
 const BeachDiv = () => {
     return <>
+    {/* <Beach/>*/}
+     <Beach/> 
+    
     <Beach/>
     <Beach/>
-    <Beach/>
-   
     </>;
 }
 
