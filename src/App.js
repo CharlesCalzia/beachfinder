@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import Track from './components/Track';
+import Tracks from './pages/Tracks';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import NavVert from "./components/Nav-vert";
@@ -54,7 +54,7 @@ function App() {
         </Route>
       
         <Route exact path="/music">
-          <Track/>
+          <Tracks/>
 
         </Route>
         <Route exact path="/Visualise/Visualise">
