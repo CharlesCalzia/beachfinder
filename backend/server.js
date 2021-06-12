@@ -1,5 +1,6 @@
 const express = require('express');
-const request = require('request'); //include libraries
+const request = require('request');
+var cors = require('cors') //include libraries
 
 require('dotenv').config(); //import environment variables
 
@@ -9,9 +10,12 @@ app.get('/', (req, res)=>{ //route to homepage
     res.send('this is the homepage');
 })
 
+app.use(cors());
+
+
 
 var allData = new Array;
-app.get('/api/v1/beaches', (req, res) => { //route to api
+app.get('/api/v1/beaches', cors(), (req, res) => { //route to api
     
     const input = req.query;
     const radius = input.radius;
@@ -27,6 +31,7 @@ app.get('/api/v1/beaches', (req, res) => { //route to api
         if(!error && response.statusCode == 200){ //check there are no errors
             var data = JSON.parse(body);
             res.send(data.results);   
+            console.log(data.results)
         }
         else{
             res.send('error');
@@ -36,6 +41,7 @@ app.get('/api/v1/beaches', (req, res) => { //route to api
 })
 
 const port = process.env.PORT || 3000; //host server on port specified in environment variables (.env file) otherwise host on port 3000
+
 app.listen(port, ()=>{
     console.log(`listening on ${port}`);
 })
