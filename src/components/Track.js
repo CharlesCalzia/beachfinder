@@ -8,7 +8,7 @@ const Track = () => {
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=beach&page_size=20&page=1&apikey=${process.env.REACT_APP_MM}`
+        `http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=beach&page_size=20&page=1&apikey=${process.env.REACT_APP_MM}`
       )
       .then(res => {
         let track_list = res.data.message.body.track_list;
