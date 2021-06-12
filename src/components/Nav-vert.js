@@ -11,10 +11,12 @@ const NavVert = () => {
  <div className="vert-menu">
             
            <center>
+           <Link to="/">
            <div >
                 <img src={home}/>
                 <p style={{color: "black", fontSize: "0.75rem", fontWeight: "600"}}>Dashboard</p>
             </div>
+            </Link>
             <br></br>
             <Link to="/upcoming">
                 
@@ -23,7 +25,7 @@ const NavVert = () => {
                 <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Upcoming</p>
             </div> </Link>
             <br></br>
-            <Link to="/visualise">
+            <Link to="/visualise/Visualise">
             <div >
                 <img src={explore}/>
                  <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Visualise</p>
@@ -46,7 +48,7 @@ const NavVert = () => {
             <br></br>
             <div >
                 <img src={logout}/>
-                <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Login</p>
+                <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>LogOut</p>
             </div>
            </center>
         </div>

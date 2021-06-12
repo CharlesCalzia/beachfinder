@@ -54,7 +54,14 @@ const Nav = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form className="d-flex">
              <div>
-             <SearchField
+             <Link to="/Devs">
+             <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
+    
+             </Link>
+    <Link to="/About">
+    <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
+    </Link>
+    <SearchField
          
              
   placeholder="Search..."
@@ -65,7 +72,7 @@ const Nav = () => {
              {/* <button><img src={filter} alt="filter" style={{ width: "4rem"}} /></button> */}
              {/* <button><img src={searchbtn} alt="search"  /></button> */}
              <button><img src={heart} alt="heart" className="heart"/></button>
-                <Link to="/login">
+                <Link to="/Login">
                   <button
                     className="btn btn-outline-success loginButton mx-4 px-3"
                     id="loginbtn"
@@ -73,7 +80,7 @@ const Nav = () => {
                     LOGIN
                   </button>
                 </Link>
-                <Link to="/register">
+                <Link to="/Signup">
                   <button
                     className="btn btn-outline-success ml-4 signupButton px-3"
                     id="signupbtn"

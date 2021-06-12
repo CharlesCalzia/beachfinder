@@ -9,7 +9,11 @@ import Filter from "./components/Filter/Filter";
 import "./App.scss";
 import BeachDiv from "./components/Beach/Beach";
 import Visualise from "./components/Visualise/Visualise";
-
+import Profile  from "./components/Profile/Profile";
+import About from './components/About/About';
+import Devs from './components/Devs/Devs';
+import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
 
 
 function App() {
@@ -36,6 +40,18 @@ function App() {
 
             <div className="BeachDiv"><BeachDiv/></div>
         </Route>
+        <Route exact path="/About">
+             <About/>
+        </Route>
+        <Route exact path="/Devs">
+             <Devs/>
+        </Route>
+        <Route exact path="/Login">
+             <Login/>
+        </Route>
+        <Route exact path="/Signup">
+             <Signup/>
+        </Route>
       
         <Route exact path="/music">
           <Track/>
@@ -43,6 +59,9 @@ function App() {
         </Route>
         <Route exact path="/Visualise/Visualise">
             <Visualise />
+          </Route>
+          <Route exact path="/Profile">
+            <Profile />
           </Route>
         
 
