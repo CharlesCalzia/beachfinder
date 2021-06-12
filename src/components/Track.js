@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 
 function Track({ url, title, artist, album_art}) {
     return (
-        <div className="flex  my-6 shadow-sm">
+        <div className="flex  my-6 shadow-sm ">
             <div className="md:h-24 md:w-24">
                 <img src={album_art} alt={title} className="bg-contain"/>
             </div>
