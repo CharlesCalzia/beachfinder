@@ -19,7 +19,7 @@ function App() {
     <Nav/>
    
     
-    <div class="flex-container">
+    <div className="flex-container">
     {/* <NavVert/> 
     
     <Filter /> */}
