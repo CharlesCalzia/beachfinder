@@ -1,0 +1,21 @@
+[debug] [2021-06-11T16:14:36.181Z] ----------------------------------------------------------------------
+[debug] [2021-06-11T16:14:36.185Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chcal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-11T16:14:36.186Z] CLI Version:   9.12.1
+[debug] [2021-06-11T16:14:36.186Z] Platform:      win32
+[debug] [2021-06-11T16:14:36.186Z] Node Version:  v14.16.0
+[debug] [2021-06-11T16:14:36.187Z] Time:          Fri Jun 11 2021 17:14:36 GMT+0100 (British Summer Time)
+[debug] [2021-06-11T16:14:36.188Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-11T16:14:36.204Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-11T16:14:36.204Z] > authorizing via signed-in user (ccalzia@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\chcal\OneDrive\Documents\GitHub\beachfinder\backend
+
