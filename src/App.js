@@ -25,15 +25,19 @@ function App() {
     <Filter /> */}
     <div><NavVert/></div>
 
-    <div className="filter"><Filter /></div>
-
-    <div className="BeachDiv"><BeachDiv/></div>
+    
 
     
 </div>
       <Switch >
+
+        <Route exact path="/">
+             <div className="filter"><Filter /></div>
+
+            <div className="BeachDiv"><BeachDiv/></div>
+        </Route>
       
-        <Route path="/music">
+        <Route exact path="/music">
           <Track/>
 
         </Route>
