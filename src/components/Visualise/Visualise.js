@@ -2,15 +2,16 @@ import Nav from "../../components/Nav.js";
 import NavVert from "../../components/Nav-vert.js";
 import React, { useRef, useEffect } from 'react'
 import './Visualise.scss'
+import MapChart from "./MapChart";
 
 const Visualise = ()=>{
 
     return <>
 
     <NavVert/>
- 
-   <div className="canvasparent">
-   <center> <Canvas className="canvas"/></center>
+
+   <div style={{height:"20rem", marginLeft:"5rem", marginTop:"0"}}>
+   <MapChart />
    </div>
     
     </>;
