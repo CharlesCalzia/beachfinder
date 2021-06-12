@@ -1,32 +1,23 @@
-import React, { useState, useEffect, useContext } from "react";
-import axios from "axios";
+import React from 'react'
+import ReactPlayer from 'react-player'
 
-const Track = () => {
-  
-   const [trackList, settrackList] = useState([ ])
+function Track({ url, title, artist, album_art}) {
+    return (
+        <div className="flex  my-6 shadow-sm">
+            <div className="md:h-24 md:w-24">
+                <img src={album_art} alt={title} className="bg-contain"/>
+            </div>
+            <div className="flex-col justify-between mx-8 w-1/3">
+                <p className="text-lg font-medium">{title}</p>
+                <p className="text-accent">{artist}</p>
+               
+            </div>
+            <div className="mt-1">
+                <ReactPlayer url={url} height={20} width={100}/>
+            </div>
+           
+        </div>
+    )
+}
 
-  useEffect(() => {
-    axios
-      .get(
-        `http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=beach&page_size=20&page=1&apikey=${process.env.REACT_APP_MM}`
-      )
-      .then(res => {
-        let track_list = res.data.message.body.track_list;
-        settrackList(track_list)
-        console.log(track_list)
-      })
-      .catch(err => console.log(err));
-  }, []);
-
- 
-
-  return (
-    <div>
-        {trackList.map(item => {
-            return <h1>{item.track.track_name}</h1>
-        })}
-    </div>
-  );
-};
-
-export default Track;
+export default Track
