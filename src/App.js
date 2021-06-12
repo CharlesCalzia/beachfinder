@@ -8,6 +8,8 @@ import NavVert from "./components/Nav-vert";
 import Filter from "./components/Filter/Filter";
 import "./App.scss";
 import BeachDiv from "./components/Beach/Beach";
+import Visualise from "./components/Visualise/Visualise";
+
 
 
 function App() {
@@ -34,7 +36,13 @@ function App() {
         <Route path="/music">
           <Track/>
 
-        </Route> 
+        </Route>
+        <Route exact path="/Visualise/Visualise">
+            <Visualise />
+          </Route>
+        
+
+        
       </Switch>
     </div>
   </Router>

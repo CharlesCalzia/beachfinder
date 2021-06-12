@@ -23,10 +23,10 @@ const NavVert = () => {
                 <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Upcoming</p>
             </div> </Link>
             <br></br>
-            <Link to="/explore">
+            <Link to="/visualise">
             <div >
                 <img src={explore}/>
-                 <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Explore</p>
+                 <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Visualise</p>
             </div>
             </Link>
             <br></br>
