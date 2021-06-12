@@ -12,11 +12,12 @@ const Tracks = () => {
  
 
   return (
-    <div className="w-1/3 mx-48">
+    <div className="w-1/3 mx-48" id="container">
       
       {trackList.map(item => {
         return <Track key = {item.id} {...item}/>
       })}
+
     </div>
   );
 };
