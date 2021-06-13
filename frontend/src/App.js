@@ -28,11 +28,13 @@ function App() {
       userAuth => {
         const user = {
           uid : userAuth.uid,
-          email: userAuth.email
+          email: userAuth.email,
+          name: userAuth.displayName
         }
 
         if(userAuth) {
           console.log(userAuth);
+          
           setuser(user)
         }else{
           setuser(null)
@@ -87,7 +89,7 @@ function App() {
             <Visualise />
           </Route>
         <Route exact path="/Profile">
-          <Profile />
+          <Profile user={user} />
         </Route>
         <Route exact path="/Settings">
           <Settings />
