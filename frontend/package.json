@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
+    "firebase": "^8.6.7",
     "genius-lyrics-api": "^3.0.6",
     "node-sass": "^6.0.0",
     "postcss": "^7.0.36",
@@ -24,6 +25,7 @@
     "react-search-field": "^1.2.1",
     "sass": "^1.34.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4",
+    "unsplash-js": "^7.0.11",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

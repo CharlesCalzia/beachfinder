@@ -14,13 +14,38 @@ import About from './components/About/About';
 import Devs from './components/Devs/Devs';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
-
+import {auth} from './services/firebase';
 
 function App() {
+
+
+  const [user, setuser] = useState(null)
+
+  useEffect(() => {
+
+    const unsubscribe = auth.onAuthStateChanged(
+      userAuth => {
+        const user = {
+          uid : userAuth.uid,
+          email: userAuth.email
+        }
+
+        if(userAuth) {
+          console.log(userAuth);
+          setuser(user)
+        }else{
+          setuser(null)
+        }
+      }
+    )
+
+    return unsubscribe;
+    
+  }, [])
   return (
     <Router>
     <div>
-    <Nav/>
+    <Nav user={user}/>
    
     
     <div className="flex-container">

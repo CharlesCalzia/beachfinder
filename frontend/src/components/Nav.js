@@ -8,15 +8,20 @@ import {useState, useEffect} from 'react'
 // import {auth} from '../../utils/firebase' 
 // import { Searchbar } from 'react-native-paper';
 import logo from './Svg/logo.png'
+import {auth} from '../services/firebase'
 
-const Nav = () => {
+const Nav = ({user}) => {
     // const [searchQuery, setSearchQuery] = React.useState('');
 
     // const onChangeSearch = query => setSearchQuery(query);
     const [selectedTechnologies, setSelectedTechnologies] = useState([]);
 
  
-
+    const history = useHistory();
+    const handleLogOut = () => {
+      auth.signOut();
+      history.push('/')
+    }
 
   
   return (
@@ -53,42 +58,73 @@ const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form className="d-flex">
-             <div>
-             <Link to="/Devs">
-             <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
-    
-             </Link>
-    <Link to="/About">
-    <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
-    </Link>
-    <SearchField
-         
-             
-  placeholder="Search..."
-//   onChange={onChange}
- 
-  classNames="test-class"
-/>
-             {/* <button><img src={filter} alt="filter" style={{ width: "4rem"}} /></button> */}
-             {/* <button><img src={searchbtn} alt="search"  /></button> */}
-             <button><img src={heart} alt="heart" className="heart"/></button>
-                <Link to="/Login">
-                  <button
-                    className="btn btn-outline-success loginButton mx-4 px-3"
-                    id="loginbtn"
-                  >
-                    LOGIN
-                  </button>
-                </Link>
-                <Link to="/Signup">
-                  <button
-                    className="btn btn-outline-success ml-4 signupButton px-3"
-                    id="signupbtn"
-                  >
-                    SIGNUP
-                  </button>
-                </Link>
-            </div> 
+            
+             {user?
+
+
+                <div>
+                    <Link to="/Devs">
+                    <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
+
+                    </Link>
+                    <Link to="/About">
+                    <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
+                    </Link>
+                    <SearchField
+
+
+                    placeholder="Search..."
+                    //   onChange={onChange}
+
+                    classNames="test-class"
+                    />
+                    {/* <button><img src={filter} alt="filter" style={{ width: "4rem"}} /></button> */}
+                    {/* <button><img src={searchbtn} alt="search"  /></button> */}
+                    <button><img src={heart} alt="heart" className="heart"/></button>
+                        <button
+                          className="btn btn-outline-success loginButton mx-4 px-3"
+                          id="loginbtn"
+                          onClick={handleLogOut}
+                        >
+                          Log Out
+                        </button>
+                    </div>
+                     : 
+                     <div>
+                      <Link to="/Devs">
+                      <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
+
+                      </Link>
+                      <Link to="/About">
+                      <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
+                      </Link>
+                    <SearchField
+
+
+                    placeholder="Search..."
+                    //   onChange={onChange}
+
+                    classNames="test-class"/>
+                  <Link to="/Login">
+                        <button
+                          className="btn btn-outline-success loginButton mx-4 px-3"
+                          id="loginbtn"
+                        >
+                          LOGIN
+                        </button>
+                      </Link>
+                      <Link to="/Signup">
+                        <button
+                          className="btn btn-outline-success ml-4 signupButton px-3"
+                          id="signupbtn"
+                        >
+                          SIGNUP
+                        </button>
+                      </Link>
+
+                  </div>
+            }
+     
             
           </form>
         </div>
