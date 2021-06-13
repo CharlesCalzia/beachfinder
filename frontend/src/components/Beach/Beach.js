@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import { createApi } from 'unsplash-js';
 
 
-
-
 const BeachDiv = () => {
 
 
@@ -26,7 +24,8 @@ const BeachDiv = () => {
   useEffect(() => {
     // settrackList(track)
     console.log("active")
-    fetch('http://localhost:8000/api/v1/beaches')
+    var test = "";
+    fetch(`http://localhost:8000/api/v1/beaches?place=${test}`)
       .then(res => res.json())
       .then(data => settrackList(data))
       .catch(err => {
@@ -52,18 +51,23 @@ const BeachDiv = () => {
 
 
   useEffect(() => {
+    console.log(trackList);
       if(trackList.length > 0){
             
             let temp1 = []
-            for(let i=0; i<10; i++){
-                
+            for(let i=0; i<3; i++){
+              if (trackList[i]!==undefined){
                 temp1.push(trackList[i])
+              }
             }
             sett1(temp1)
 
             let temp2 = []
-            for(let i=10; i<20; i++){
-                temp2.push(trackList[i])
+            for(let i=3; i<6; i++){
+                console.log(trackList[i]);
+                if (trackList[i]!==undefined){
+                  temp2.push(trackList[i])
+                }
             }
             sett2(temp2)
         }
@@ -108,7 +112,6 @@ const Beach = ({url,name,formatted_address}) => {
 // getPhotoUrl();
 return (
 <div className="BeachTile mt-12 h-max">
-    <h1>Beach</h1>
     <div className="beachimage">
         <img src={url} className="image"/>
     </div>

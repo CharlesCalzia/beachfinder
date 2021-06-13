@@ -12,41 +12,41 @@ const NavVert = () => {
             
            <center>
            <Link to="/">
-           <div >
+           <div class="sidebar-btn">
                 <img src={home}/>
-                <p style={{color: "black", fontSize: "0.75rem", fontWeight: "600"}}>Dashboard</p>
+                <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Dashboard</p>
             </div>
             </Link>
             <br></br>
-            <Link to="/upcoming">
+            <Link to="/Settings">
                 
-            <div >
-                <img src={upcoming}/>
-                <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Upcoming</p>
+            <div class="sidebar-btn">
+                <img src={settings}/>
+                <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Settings</p>
             </div> </Link>
             <br></br>
-            <Link to="/visualise/Visualise">
-            <div >
+            <Link to="/Visualise">
+            <div class="sidebar-btn">
                 <img src={explore}/>
                  <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Visualise</p>
             </div>
             </Link>
             <br></br>
             <Link to="/profile">
-            <div >
+            <div class="sidebar-btn">
             <img src={profile}/>
             <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Profile</p>
-        </div>
-        </Link>
+            </div>
+            </Link>
             <br></br>
-            <Link to="/music">
-            <div >
-                <img src={settings}/>
+            <Link to="/Music">
+            <div class="sidebar-btn">
+                <img src={upcoming}/>
                 <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>Music</p>
             </div>
             </Link>
             <br></br>
-            <div >
+            <div class="sidebar-btn">
                 <img src={logout}/>
                 <p style={{color: "#FA9538", fontSize: "0.75rem", fontWeight: "600"}}>LogOut</p>
             </div>

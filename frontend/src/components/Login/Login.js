@@ -1,13 +1,11 @@
 import './Login.scss';
-
-
 import { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { auth } from "../../services/firebase";
 
 const Login = ()=>{
 
-  
+
     const [email, setemail] = useState("")
     const [pass, setpass] = useState("")
 
@@ -27,11 +25,11 @@ const Login = ()=>{
     }
 
     return <>
-          <div className="box2"> 
+    <div className="box2"> 
               <p style={{color: "white", fontWeight: "700", fontSize: "2rem", marginLeft:"2rem"}}>Login</p>
 
               <form style={{marginLeft: "2rem", fontSize:"1.5rem"}}>
-                    
+
 
                   <p>E-mail Address</p>
                           <input
@@ -39,7 +37,7 @@ const Login = ()=>{
                             value = {email}
                             onChange={(e) => setemail(e.target.value)}
                           />
-                      
+
                       <p>Password</p>
                       <input
                         type="password"
@@ -51,6 +49,6 @@ const Login = ()=>{
               </form>
       </div>
     </>
-}
 
+}
 export default Login;
