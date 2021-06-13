@@ -6,9 +6,6 @@ require('dotenv').config(); //import environment variables
 
 const app = express(); //create express app
 
-app.get('/', (req, res)=>{ //route to homepage
-    res.send('this is the homepage');
-})
 
 app.use(cors());
 
@@ -21,23 +18,47 @@ app.get('/api/v1/beaches', cors(), (req, res) => { //route to api
     const radius = input.radius;
     const lat = input.lat;
     const lng = input.lng;
+    const place = input.place;
+    console.log(place===undefined);
+    if (place===undefined){
+        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?type=natural_feature&location=${lat},${lng}&radius=${radius}&key=${process.env.API_KEY}&query=beach`;
+        console.log(url);
+        request({ //make call to the google api
+            method: 'GET',
+            uri: url,
+        }, (error, response, body) => {
+            if(!error && response.statusCode == 200){ //check there are no errors
+                var data = JSON.parse(body);
+                res.send(data.results);   
+                //console.log(data.results)
+            }
+            else{
+                res.send('error');
+            }
+            
+        })
+    }
+    else{
+        const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?type=natural_feature&location=${lat},${lng}&radius=${radius}&key=${process.env.API_KEY}&query=beaches+in+${place}`;
+        console.log(url);
+        request({ //make call to the google api
+            method: 'GET',
+            uri: url,
+        }, (error, response, body) => {
+            if(!error && response.statusCode == 200){ //check there are no errors
+                var data = JSON.parse(body);
+                res.send(data.results);   
+                //console.log(data.results)
+            }
+            else{
+                res.send('error');
+            }
+            
+        })
+    }
     
-    const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=beach&type=natural_feature&location=${lat},${lng}&radius=${radius}&key=${process.env.API_KEY}`
     
-    request({ //make call to the google api
-        method: 'GET',
-        uri: url,
-    }, (error, response, body) => {
-        if(!error && response.statusCode == 200){ //check there are no errors
-            var data = JSON.parse(body);
-            res.send(data.results);   
-            console.log(data.results)
-        }
-        else{
-            res.send('error');
-        }
-        
-    })
+    
 })
 
 const port = process.env.PORT || 3000; //host server on port specified in environment variables (.env file) otherwise host on port 3000

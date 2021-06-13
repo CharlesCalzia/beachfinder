@@ -16,12 +16,13 @@ const Nav = ({user}) => {
     // const onChangeSearch = query => setSearchQuery(query);
     const [selectedTechnologies, setSelectedTechnologies] = useState([]);
 
- 
     const history = useHistory();
     const handleLogOut = () => {
       auth.signOut();
       history.push('/')
     }
+
+
 
   
   return (
@@ -58,74 +59,71 @@ const Nav = ({user}) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form className="d-flex">
-            
-             {user?
+          {user?
 
 
-                <div>
-                    <Link to="/Devs">
-                    <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
+          <div>
+              <Link to="/Devs">
+              <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
 
-                    </Link>
-                    <Link to="/About">
-                    <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
-                    </Link>
-                    <SearchField
-
-
-                    placeholder="Search..."
-                    //   onChange={onChange}
-
-                    classNames="test-class"
-                    />
-                    {/* <button><img src={filter} alt="filter" style={{ width: "4rem"}} /></button> */}
-                    {/* <button><img src={searchbtn} alt="search"  /></button> */}
-                    <button><img src={heart} alt="heart" className="heart"/></button>
-                        <button
-                          className="btn btn-outline-success loginButton mx-4 px-3"
-                          id="loginbtn"
-                          onClick={handleLogOut}
-                        >
-                          Log Out
-                        </button>
-                    </div>
-                     : 
-                     <div>
-                      <Link to="/Devs">
-                      <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
-
-                      </Link>
-                      <Link to="/About">
-                      <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
-                      </Link>
-                    <SearchField
+              </Link>
+              <Link to="/About">
+              <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
+              </Link>
+              <SearchField
 
 
-                    placeholder="Search..."
-                    //   onChange={onChange}
+              placeholder="Search..."
+              //   onChange={onChange}
 
-                    classNames="test-class"/>
-                  <Link to="/Login">
-                        <button
-                          className="btn btn-outline-success loginButton mx-4 px-3"
-                          id="loginbtn"
-                        >
-                          LOGIN
-                        </button>
-                      </Link>
-                      <Link to="/Signup">
-                        <button
-                          className="btn btn-outline-success ml-4 signupButton px-3"
-                          id="signupbtn"
-                        >
-                          SIGNUP
-                        </button>
-                      </Link>
+              classNames="test-class"
+              />
+              {/* <button><img src={filter} alt="filter" style={{ width: "4rem"}} /></button> */}
+              {/* <button><img src={searchbtn} alt="search"  /></button> */}
+              <button><img src={heart} alt="heart" className="heart"/></button>
+                  <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    id="loginbtn"
+                    onClick={handleLogOut}
+                  >
+                    Log Out
+                  </button>
+              </div>
+              : 
+              <div>
+                <Link to="/Devs">
+                <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>Developers</button>
 
-                  </div>
-            }
-     
-            
+                </Link>
+                <Link to="/About">
+                <button style={{marginRight: "2rem", color:"#FA9538", fontWeight:"700"}}>About</button>               
+                </Link>
+              <SearchField
+
+
+              placeholder="Search..."
+              //   onChange={onChange}
+
+              classNames="test-class"/>
+            <Link to="/Login">
+                  <button
+                    className="btn btn-outline-success loginButton mx-4 px-3"
+                    id="loginbtn"
+                  >
+                    LOGIN
+                  </button>
+                </Link>
+                <Link to="/Signup">
+                  <button
+                    className="btn btn-outline-success ml-4 signupButton px-3"
+                    id="signupbtn"
+                  >
+                    SIGNUP
+                  </button>
+                </Link>
+
+            </div>
+          }           
           </form>
         </div>
       </div>

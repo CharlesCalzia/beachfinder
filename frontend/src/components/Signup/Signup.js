@@ -4,28 +4,27 @@ import { useHistory } from "react-router-dom";
 import { auth } from "../../services/firebase";
 
 const Signup = ()=>{
+  const [name, setname] = useState("")
+  const [email, setemail] = useState("")
+  const [pass, setpass] = useState("")
 
-    const [name, setname] = useState("")
-    const [email, setemail] = useState("")
-    const [pass, setpass] = useState("")
+  const history = useHistory();
 
-    const history = useHistory();
-
-    const register = (e) => {
-      e.preventDefault();
-      auth
-        .createUserWithEmailAndPassword(email, pass)
-        .then((user) => {
-          console.log(user);
-          history.push("/login");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+  const register = (e) => {
+    e.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, pass)
+      .then((user) => {
+        console.log(user);
+        history.push("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
     return <>
-          <div className="box2"> 
+      <div className="box2"> 
               <p style={{color: "white", fontWeight: "700", fontSize: "2rem", marginLeft:"2rem"}}>SignUp</p>
 
               <form style={{marginLeft: "2rem", fontSize:"1.5rem"}}>
@@ -42,7 +41,7 @@ const Signup = ()=>{
                             value = {email}
                             onChange={(e) => setemail(e.target.value)}
                           />
-                      
+
                       <p>Password</p>
                       <input
                         type="password"

@@ -2,9 +2,9 @@ import './Profile.scss'
 
 const Profile = () => {
 
-    const profileurl = "https://data.whicdn.com/images/351499884/original.jpg";
-    const name = "Sarah James";
-    const email = "Sarah@gmail.com";
+    const profileurl = "https://images.unsplash.com/photo-1616083391267-de7b0970af2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80";
+    const name = "John Smith";
+    const email = "jsmith@gmail.com";
     const favs = "Baker Beach, Miami Beach";
 
     return <>

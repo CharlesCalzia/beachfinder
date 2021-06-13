@@ -1,5 +1,5 @@
-import Nav from "../../components/Nav.js";
-import NavVert from "../../components/Nav-vert.js";
+import Nav from "../Nav.js";
+import NavVert from "../Nav-vert.js";
 import React, { useRef, useEffect } from 'react'
 import './Visualise.scss'
 

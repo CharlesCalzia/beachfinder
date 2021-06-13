@@ -13,24 +13,16 @@ const Filter = () => {
   </label>
   <label className="text-black text-left ml-2 text-base mt-4">
     Max Ratings:
-    <input style={{ background: "white"}} type="number" />
+    <input className="w-52" type="number"/>
   </label>
   <label className="text-black text-left ml-2 text-base mt-4">
     Location:
-    <input style={{ background: "white"}} type="text" />
-  </label>
-  <label className="text-black text-left ml-2 text-base mt-4">
-    Weather:
-    <input style={{ background: "white"}} type="text" />
-  </label>
-  <label className="text-black text-left ml-2 text-base mt-4">
-    Children Friendly:
-    <input style={{ background: "white"}} type="number" />
+    <input className="w-52" type="text"/>
   </label>
   
     <br></br>
     <br></br>
-    <input type="submit" name="Apply Filter" value="Apply Filter" className="px-8 py-1 rounded-3xl text-white bg-accent"/>
+    <input type="submit" name="Apply Filter" value="Apply Filter" className="shadow px-8 py-1 rounded-3xl text-white bg-accent"/>
  
 </form></center>
  

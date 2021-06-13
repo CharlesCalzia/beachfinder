@@ -9,16 +9,17 @@ import Filter from "./components/Filter/Filter";
 import "./App.scss";
 import BeachDiv from "./components/Beach/Beach";
 import Visualise from "./components/Visualise/Visualise";
+import Settings from "./components/Settings/Settings";
 import Profile  from "./components/Profile/Profile";
 import About from './components/About/About';
 import Devs from './components/Devs/Devs';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
+
 import {auth} from './services/firebase';
 
+
 function App() {
-
-
   const [user, setuser] = useState(null)
 
   useEffect(() => {
@@ -40,13 +41,13 @@ function App() {
     )
 
     return unsubscribe;
-    
+
   }, [])
+
   return (
     <Router>
     <div>
     <Nav user={user}/>
-   
     
     <div className="flex-container">
     {/* <NavVert/> 
@@ -78,18 +79,19 @@ function App() {
              <Signup/>
         </Route>
       
-        <Route exact path="/music">
+        <Route exact path="/Music">
           <Tracks/>
 
         </Route>
-        <Route exact path="/Visualise/Visualise">
+        <Route exact path="/Visualise">
             <Visualise />
           </Route>
-          <Route exact path="/Profile">
-            <Profile />
-          </Route>
-        
-
+        <Route exact path="/Profile">
+          <Profile />
+        </Route>
+        <Route exact path="/Settings">
+          <Settings />
+        </Route>
         
       </Switch>
     </div>
