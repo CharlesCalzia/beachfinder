@@ -39,4 +39,27 @@ export const track = [
         album_art : 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Forig02.deviantart.net%2F5d7c%2Ff%2F2017%2F132%2F9%2F4%2Fmiley_cyrus___malibu_by_flavs9701-db8xj4n.png&f=1&nofb=1',
         
     },
+
+    {
+        id: 6,
+        url : 'https://youtu.be/E07s5ZYygMg',
+        title: 'Watermelon Sugar',
+        artist: 'Harry Styles',
+        album_art: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flab.fm%2Fwp-content%2Fuploads%2F2020%2F05%2Fharry-styles-watermelon-sugar-mv%401400x1050.jpg&f=1&nofb=1'
+    },
+    {
+        id: 7,
+        url : 'https://youtu.be/14zIhlfeUjE',
+        title: 'California Dreamin',
+        artist: 'Arman Cekin',
+        album_art: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.mOlGKE2Ky-C4-Q_2G9OWSwHaEK%26pid%3DApi&f=1'
+    },
+    {
+        id: 8,
+        url : 'https://youtu.be/nkvm1qEabl4',
+        title: 'San Francisco',
+        artist: 'Niall Horan',
+        album_art: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ujGaFUT2GWp3MpSzBmQMVAHaEK%26pid%3DApi&f=1'
+    },
+
 ]
